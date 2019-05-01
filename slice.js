@@ -7,6 +7,14 @@
 * will take the last-most or first-most element.
 *  (  Does it edit it?  ) 2. No.
 *  (What does it return?) 3. A shallow copy of the array.
-*  (How can we use this?) 4. 
-*
+*  (How can we use this?) 4. When handling a large amount of data that you
+* need to work with, you can splice it to increase efficiency
 */
+
+let superData = [0, 234, 678, 349, 239, 80, 8093, 09384/* ... */];
+
+let data = superData.slice(-4, -2);
+
+//work with data
+
+console.log(data);
