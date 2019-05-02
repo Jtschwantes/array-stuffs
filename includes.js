@@ -22,3 +22,11 @@ let bannedNames = [
     'xvcbxcvb',
     'cvncvbnncv'
 ]
+
+if(bannedNames.includes('qwerqwer')) {
+    console.log('User has been banned');
+}
+else {
+    console.log('yep');
+}
+
