@@ -5,7 +5,6 @@
 *  (What does it return?) 3. The element that was removed.
 *  (How can we use this?) 4. There could be a queue that is needed to service
 * people who call the school for help on certain needs. 
-*
 */
 
 //example array of people who need to be serviced.
@@ -35,7 +34,7 @@ let newCall = {
 //We should know how big the queue is to give estimated wait times.
 let queueSize = serviceArray.length;
 
-//Oh no! Someone else needs help! We need to update our queue.
+//Someone else needs help! We need to update our queue.
 queueSize = serviceArray.push(newCall);
 //When someone is serviced you can shift to shrink the queue
 let temp = serviceArray.shift();

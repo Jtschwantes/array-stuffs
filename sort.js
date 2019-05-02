@@ -6,15 +6,19 @@
 *  (How can we use this?) 4. Sorting large amounts of data is important
 * for handling large amounts of data. We don't want to do a linear search
 * if we sort our data, we can perform better searches, and organize our
-* data in more efficient ways
+* data in more efficient ways.
 */
 
-//Simple sort
+// Simple sort
 let arr = ["c", "h", "i", "e", "z", "t", "a", "p"/* ... */];
 arr.sort();
 console.log(arr);
 
-function worldsBestSort() {
-
+// My own function to sort it backwards
+arr = arr = ["c", "h", "i", "e", "z", "t", "a", "p"/* ... */];
+function worldsBestSort(a, b) {
+    if (a < b) { return 1; }
+    else       { return -1;}
 }
+console.log(arr.sort(worldsBestSort));
 

@@ -12,9 +12,7 @@
 */
 
 let superData = [0, 234, 678, 349, 239, 80, 8093, 09384/* ... */];
-
 let data = superData.slice(-4, -2);
 
 //work with data
-
 console.log(data);

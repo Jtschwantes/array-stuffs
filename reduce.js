@@ -19,41 +19,35 @@ let average = grades.reduce((sum, value) => sum += value) / numStudents;
 console.log(average);
 
 /*     Without accumulator -                */
-let newArr;
+let value;
+let newArr = [];
 let objArr = [{
         firstName: "Bob",
         lastName: "Bobson",
         gpa: 2.3,
         school: "OSU",
-        interviewTime: ""
     },
     {
         firstName: "Fred",
         lastName: "Fredson",
         gpa: 3.9,
         school: "UVU",
-        interviewTime: "" 
     },
     {
         firstName: "Joe",
         lastName: "Joeson",
         gpa: 2.9,
         school: "Yale",
-        interviewTime: ""
     },
     {
         firstName: "Brad",
         lastName: "Bradson",
         gpa: 3.5,
         school: "ISU",
-        interviewTime: ""
     }
 ];
 
-function reducer(person) {
-    if(person.gpa > 3.2) {
-        newArr.push(value);
-    }
-}
-
-newArr = objects.reduce(reducer);
+value = objArr.reduce(function(accum, curVal) {
+    newArr.push(curVal.gpa);
+}, 0);
+console.log(newArr);
