@@ -4,6 +4,21 @@
 * takes negative numbers as a "nth to last" for the value parameter.
 *  (  Does it edit it?  ) 2. No.
 *  (What does it return?) 3. True or false.
-*  (How can we use this?) 4. 
-*
+*  (How can we use this?) 4. We can use includes to test a white or black
+* list on a website. If we have a list of banned usernames in a file, we 
+* could load that into an array and test the username to see if they are
+* allowed on the site.
 */
+
+let bannedNames = [
+    'asdfasdfsadf',
+    'dfhdfghdfgh',
+    'fgjhfgjhfgjh',
+    'qwerqwer',
+    'eryertyerty',
+    'tyuituityui',
+    'yuioyuioyuio',
+    'zxcvzxcv',
+    'xvcbxcvb',
+    'cvncvbnncv'
+]
