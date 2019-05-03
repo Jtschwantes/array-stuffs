@@ -21,9 +21,10 @@ let bannedNames = [
     'zxcvzxcv',
     'xvcbxcvb',
     'cvncvbnncv'
-]
+];
 
 if(bannedNames.includes('qwerqwer')) {
+    reject(user);
     console.log('User has been banned');
 }
 else {

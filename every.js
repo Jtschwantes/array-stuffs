@@ -7,9 +7,18 @@
 *  (What does it return?) 3. True or false.
 *  (How can we use this?) 4. Every can check any array if every element follows
 * the conditions that you set. For example, if I had an array of hundreds of
-* credit cards, I could ensure that they all follow credit card format standards
+* credit cards, I could ensure that they all follow credit card format 
+* standards.
 */
 
+//        [ None ----------------- Some ------------------- Every]
+// Every  [                                                 Every]
+// Some   [      ----------------- Some ------------------- Every]
+//!Every  [ None ----------------- Some -------------------      ]
+//!Some   [ None                                                 ]
+
+
+//List of credit cards listed on a site.
 let ccs = [
     '8516-9456-1097-8229',
     '5502-6418-7286-7108',
@@ -27,8 +36,10 @@ let ccs = [
     '9518-5489-1935-4321'
 ];
 
+//Function with regular expressions to determine validity
 function func(value) {
     return /^\d{4}-\d{4}-\d{4}-\d{4}$/.test(value);
 }
 
+//This will determine if every card qualifies!
 console.log(ccs.every(func));

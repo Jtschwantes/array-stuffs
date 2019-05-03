@@ -6,11 +6,11 @@
 *  (How can we use this?) 4. Anytime you want to organize data in arrays
 * and you have to merge two. My example would be an array that holds
 * information for what books people use in a libray. An array could hold
-* information for the "youth" section, and concat would be useful for new
-* shipments of books.
+* information for a certain section, and a new shipment would need to
+* add on to the original information
 */
 
-//example array of people who need to be serviced.
+//example array of information on books
 let isleB = [{
     authorFirstName: "Bob",
     authorLastName: "Bobson",
@@ -44,6 +44,7 @@ let newBooks = [{
     genre: "religious"
 }
 ];
+//Another two
 let newBooks2 = [{
     authorFirstName: "JRR",
     authorLastName: "Tolkin",
@@ -58,4 +59,5 @@ let newBooks2 = [{
 }
 ];
 
+//We got a new shipment! We need to add them to our collection
 console.log(isleB.concat(newBooks, newBooks2));

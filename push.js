@@ -7,7 +7,8 @@
 */
 
 //example array of people who need to be serviced.
-let serviceArray = [{
+let serviceArray = [
+{
     firstName: "Bob",
     lastName: "Bobson",
     email: "blahblahblah"

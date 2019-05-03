@@ -9,6 +9,12 @@
 * shared online, the following code could test that. 
 */
 
+//        [ None ----------------- Some ------------------- Every]
+// Every  [                                                 Every]
+// Some   [      ----------------- Some ------------------- Every]
+//!Every  [ None ----------------- Some -------------------      ]
+//!Some   [ None                                                 ]
+
 let ccs = [
     '8516-9df451097-8229',
     '5502-6418-72as87108',

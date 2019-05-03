@@ -7,6 +7,7 @@
 * filter out who you want for an honors position by their gpa.
 */
 
+//List of students
 let students = [{
     firstName: "Bob",
     lastName: "Bobson",
@@ -33,8 +34,10 @@ let students = [{
 }
 ];
 
+//Filter is good for getting certain information out
 let newStudents = students.filter(student => student.gpa > 3.4);
 
+//Here we can print acceptance to certain people based on gpa
 newStudents.forEach(value => console.log(`Congratulations\
  ${value.firstName}! You have been accepted into\
  ${value.school}'s honor society!`));
