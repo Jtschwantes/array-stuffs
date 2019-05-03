@@ -1,5 +1,5 @@
 //Word to decode, might turn this into a command line argument later, idk
-let word = "cookbooks";
+let word = process.argv[2];
 
 let chars = word.split("");
 
@@ -28,20 +28,32 @@ while(nest.length > 1) {
         else if (a[1] === b[1] && a[0] > b[0]) { return 1; }
         else                                   { return -1; }
     })
-    console.log(nest);
     //Send build huffman encoding values
     let str = nest[0][0].split("");
     for(let i = 0; i < str.length; i++) {
         let pair = comp.find(val => val[0] === str[i]);
         let ind = comp.indexOf(pair);
+        comp[ind][1] = '0' + comp[ind][1];
+    }
+    str = nest[1][0].split("");
+    for(let i = 0; i < str.length; i++) {
+        let pair = comp.find(val => val[0] === str[i]);
+        let ind = comp.indexOf(pair);
+        comp[ind][1] = '1' + comp[ind][1];
     }
     comp.indexOf()
     //Take the smallest two and merge
     nest[1][0] += nest[0][0];
     nest[1][1] += nest[0][1];
-
     nest.shift();
 }
 
-console.log(nest);
-console.log(comp);
+//Lastly, print the code for the user
+let codeString = ''
+chars.forEach(function(char){
+    let pair = comp.find(val => val[0] === char)
+    let ind = comp.indexOf(pair);
+    codeString += comp[ind][1];
+})
+
+console.log(codeString);
