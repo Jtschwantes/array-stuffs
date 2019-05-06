@@ -3,7 +3,7 @@
 * consecutive elements and reducing it to "one thing". The first parameter
 * is the function, the second parameter is an optional initial value for the
 * accumulater
-*  (  Does it edit it?  ) 2. Yes.
+*  (  Does it edit it?  ) 2. No.
 *  (What does it return?) 3. A single value or object.
 *  (How can we use this?) 4. Reduce seems particularly useful for
 * summing an array. We could use this to average a series of grades.
@@ -14,7 +14,7 @@
 let grades = [60, 65, 70, 80, 85, 90, 90, 90, 95, 95, 100];
 let numStudents = grades.length;
 
-let average = grades.reduce((sum, value) => sum += value) / numStudents;
+let average = grades.reduce((sum, value, i) => sum += value) / numStudents;
 
 console.log(average);
 

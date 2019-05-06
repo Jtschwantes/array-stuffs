@@ -78,6 +78,8 @@ while(nest.length > 1) {
     nest[1][0] += nest[0][0];
     nest[1][1] += nest[0][1];
     nest.shift();
+
+    console.log(comp);
 }
 
 // Print the code for the user
@@ -100,5 +102,5 @@ compRatio = bits / codeString.length;
 
 //Print for the user
 console.log(`Code: ${codeString}`);
-console.log(`Compression Ratio: ${compRatio.toFixed(2)}`)
+console.log(`Compression Ratio: ${compRatio.toFixed(2)}`);
 //console.log(`Key: ${keyString}`);
